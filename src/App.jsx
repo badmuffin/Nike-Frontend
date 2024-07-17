@@ -4,9 +4,9 @@ import Nav from "./components/Nav";
 
 const App = () => {
   return(
-    <main className=" relative p-4">
+    <main className=" relative p-4 border-2 border-blue-400">
       <Nav/> 
-      <section className=" xl:padding-1 wide:padding-r padding-b" >
+      <section className=" xl:padding-l wide:padding-r padding-b" >
         <Hero/>
       </section>
       <section className=" padding">
@@ -35,3 +35,11 @@ const App = () => {
 };
 
 export default App;
+
+// Things to be added
+/*
+1. Clickable product cards which opens a new product page - Routing
+2. Animation on Hover - apply animation to each card & animation of the section during scrolling and refresh
+3. Scrollable customer review cards - add extra constants value too
+4. burger icon working
+*/

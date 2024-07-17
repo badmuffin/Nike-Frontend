@@ -13,7 +13,7 @@ const Nav = () => {
           {navLinks.map((item) => (
             <li key={item.label}>
               <a
-                href={item.href}
+                href={item.href} //when clicked, it transitioned to respective link
                 className="leading-normal text-lg text-slate-gray"
               >
                 {item.label}

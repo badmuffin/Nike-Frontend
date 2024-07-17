@@ -4,11 +4,16 @@ import { shoes, statistics } from "../constants"
 import { bigShoe1} from "../assets/images";
 import ShoeCard from "../components/ShoeCard";
 
+import { useState } from "react";
+
 const Hero = () => {
+
+  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
+  
   return (
     <section
       id="home"
-      className="w-full flex xl:flex-row flex-col justify-center  items-center min-h-screen border-2 border-red-500 p-2 gap-10 max-container"
+      className="w-full flex xl:flex-row flex-col justify-center  items-center min-h-screen p-2 gap-10 max-container relative "
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p className="text-xl font-montserrat text-coral-red">Our Summer Collection</p>
@@ -36,16 +41,16 @@ const Hero = () => {
 
 {/* flex-1 is the shorthand utlity class for flex-grow, flex-shrink, and flex-basis */}
       <div className="relative flex-1 flex justify-center items-center xl:min-h-screen  max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
-        <img src={bigShoe1} alt="big shoe" width={610} height={500} className=" object-contain relative z-10"/>
+        <img src={bigShoeImg} alt="big shoe" width={610} height={500} className=" object-contain relative z-10"/>
       </div>
 
-      <div>
-        {shoes.map( (shoe)=> (
-          <div key={shoe} >
+      <div className="flex sm:gap-6 gap-4 absolute -bottom-[2%] xl:right-[8%] max-sm:px-6 ">
+        {shoes.map( (shoe, index)=> (
+          <div key={index} >
             <ShoeCard 
               imgURL={shoe}
-              changeBigShoeImage = { () => {}}
-              bigShoeImg = ""
+              changeBigShoeImage = { (shoe) => setBigShoeImg(shoe)} /* callback function* */
+              bigShoeImg = {bigShoeImg}
             />
           </div>
         ))}

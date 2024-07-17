@@ -32,5 +32,4 @@ Screenshots of the website:-
 - Animation on Hover and scroll
 
 ## Contact
-If you have any questions or feddback, feel free to reach out
-Checkout my profile for my social media handles.
+If you have any questions or feddback, feel free to reach out. (See my profile)

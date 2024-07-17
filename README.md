@@ -33,3 +33,6 @@ Screenshots of the website:-
 
 ## Contact
 If you have any questions or feddback, feel free to reach out. (See my profile)
+
+## Special Credit
+Javascript Mastery Youtube channel https://www.youtube.com/@javascriptmastery
